@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Establecimientos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Registro de Establecimientos</h2>
+        <form>
+            <div class="form-group">
+                <label for="idDireccion">Direccion</label>
+                <select class="form-control" id="idDireccion" required>
+                    <option value="1">Tipo 1</option>
+                    <option value="2">Tipo 2</option>
+                    <!-- Agrega las opciones según los idDireccion disponibles -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idTipoEstablecimiento">ID de Tipo de Establecimiento</label>
+                <select class="form-control" id="idTipoEstablecimiento" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el ID de Tipo de Establecimiento-->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="horarioApertura">Horario de Apertura</label>
+                <input type="time" class="form-control" id="horarioApertura" required>
+            </div>
+            <div class="form-group">
+                <label for="horarioCierre">Horario de Cierre</label>
+                <input type="time" class="form-control" id="horarioCierre" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Establecimiento</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

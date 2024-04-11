@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Inscripción SAR</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Registro de Inscripción SAR</h2>
+        <form>
+            <div class="form-group">
+                <label for="fechaLimite">Fecha Límite</label>
+                <input type="date" class="form-control" id="fechaLimite" required>
+            </div>
+            <div class="form-group">
+                <label for="cai">CAI</label>
+                <input type="text" class="form-control" id="cai" placeholder="Ingrese el CAI" required>
+            </div>
+            <div class="form-group">
+                <label for="inicioRango">Inicio de Rango</label>
+                <input type="number" class="form-control" id="inicioRango" placeholder="Ingrese el inicio de rango" required>
+            </div>
+            <div class="form-group">
+                <label for="actualRango">Actual Rango</label>
+                <input type="number" class="form-control" id="actualRango" placeholder="Ingrese el actual rango" required>
+            </div>
+            <div class="form-group">
+                <label for="finalRango">Final de Rango</label>
+                <input type="number" class="form-control" id="finalRango" placeholder="Ingrese el final de rango" required>
+            </div>
+            <div class="form-group">
+                <label for="activoSAR">Activo SAR</label>
+                <input type="text" class="form-control" id="activoSAR" placeholder="Ingrese el estado de SAR" required>
+            </div>
+            <div class="form-group">
+                <label for="rtn">RTN</label>
+                <input type="text" class="form-control" id="rtn" placeholder="Ingrese el RTN" required>
+            </div>
+            <div class="form-group">
+                <label for="idCaja">ID de Caja</label>
+                <select class="form-control" id="idCaja" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el idCaja-->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idTipoDocumento">ID de Tipo de Documento</label>
+                <select class="form-control" id="idTipoDocumento" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el idTipoDocumento-->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Inscripción SAR</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
