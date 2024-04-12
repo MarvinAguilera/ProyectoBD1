@@ -23,7 +23,7 @@
         .product {
             background-color: #fff;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(13, 200, 16, 0.575);
             padding: 20px;
             margin-bottom: 20px;
         }
@@ -40,26 +40,48 @@
         .btn {
             cursor: pointer;
         }
+        .product-list {
+         display: none;
+        position: absolute;
+        background-color: #ffffff; /* Color de fondo de la lista */
+        padding: 10px;
+        list-style-type: none;
+}
+
+        .nav-item:hover .product-list {
+         display: block;
+}
+
     </style>
 </head>
 <body>
     <header>
         <h1>Eco Justa</h1>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-success bg-success">
         <div class="container">
-            <a class="navbar-brand" href="#">Inicio</a>
+            <a class="nav-link" href="#" style="color: white;">Inicio</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Productos</a>
+                        <a class="nav-link" href="#" style="color: white;">Productos</a>
+
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="#" style="color: white;">Tipo de Producto</a>
+                        <ul class="product-list">
+                            <li>Granos basicos</li>
+                            <li>Lacteos</li>
+                            <li>Verduras</li>
+                            <!-- Agrega más elementos de lista según sea necesario -->
+                        </ul>
                     </li>
+                    
+                    
                 </ul>
                 <form class="form-inline my-2 my-lg-0 mr-3">
                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
@@ -77,41 +99,68 @@
         <div>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nombre de usuario</a>
+                    <a class="nav-link" href="#" style="color: white;">Nombre de Usuario</a>
+
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cerrar sesión</a>
+                    <a href="login.html" class="nav-link"  style="color: white;">Cerrar Sesión</a>
+                    
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav><br>
+    <div style="text-align: center;">
+        <h1>Productos más vendidos</h1>
+    </div>
+    
     <section class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="product">
-                    <img src="frijoles.jpg" alt="Producto 1">
-                    <h2>Producto 1</h2>
-                    <p>Descripción del producto 1.</p>
-                    <p>Precio: $50.00</p>
-                    <button class="btn btn-primary">Agregar al carrito</button>
+                    <img src="Images/frijoles.jpg" alt="Producto 1">
+                    <h2>Frijoles</h2>
+                    <p>Precio Medida</p>
+                    <p>Precio: L80.00</p> 
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="product">
-                    <img src="product2.jpg" alt="Producto 2">
-                    <h2>Producto 2</h2>
-                    <p>Descripción del producto 2.</p>
-                    <p>Precio: $70.00</p>
-                    <button class="btn btn-primary">Agregar al carrito</button>
+                    <img src="Images/queso.jpeg" alt="Producto 2">
+                    <h2>Queso</h2>
+                    <p>Precio Libra</p>
+                    <p>Precio: L50.00</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="product">
-                    <img src="product3.jpg" alt="Producto 3">
-                    <h2>Producto 3</h2>
-                    <p>Descripción del producto 3.</p>
-                    <p>Precio: $100.00</p>
-                    <button class="btn btn-primary">Agregar al carrito</button>
+                    <img src="Images/maiz.avif" alt="Producto 3">
+                    <h2>Maíz</h2>
+                    <p>Precio Medida</p>
+                    <p>Precio: L20.00</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="Images/arroz.jpg" alt="Producto 4">
+                    <h2>Arroz</h2>
+                    <p>Precio Libra</p>
+                    <p>Precio: L8.00</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="Images/cebolla.webp" alt="Producto 5">
+                    <h2>Cebollas</h2>
+                    <p>Precio Libra</p>
+                    <p>Precio: L20.00</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="Images/papas.avif" alt="Producto 6">
+                    <h2>Papas</h2>
+                    <p>Precio Libra</p>
+                    <p>Precio: L10.00</p>
                 </div>
             </div>
         </div>
