@@ -1,0 +1,81 @@
+<?php
+// Conexión a la base de datos
+$servername = "localhost";
+$username = "usuario";
+$password = "contraseña";
+$dbname = "ProyectoV1";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+// Consulta para obtener los datos de la tabla Personas
+$sql = "SELECT * FROM Personas";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Personas</title>
+    <!-- Incluir Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Personas</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Primer Nombre</th>
+                    <th>Segundo Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Número Teléfono</th>
+                    <th>Email</th>
+                    <th>DNI</th>
+                    <th>Género</th>
+                    <th>Fecha de Nacimiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                if ($result->num_rows > 0) {
+                    // Salida de datos de cada fila
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>".$row["ID"]."</td>";
+                        echo "<td>".$row["PrimerNombre"]."</td>";
+                        echo "<td>".$row["SegundoNombre"]."</td>";
+                        echo "<td>".$row["PrimerApellido"]."</td>";
+                        echo "<td>".$row["SegundoApellido"]."</td>";
+                        echo "<td>".$row["NumeroTelefono"]."</td>";
+                        echo "<td>".$row["Email"]."</td>";
+                        echo "<td>".$row["DNI"]."</td>";
+                        echo "<td>".$row["Genero"]."</td>";
+                        echo "<td>".$row["FechaNacimiento"]."</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='10'>No hay resultados</td></tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <!-- Incluir Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<?php
+// Cerrar conexión a la base de datos
+$conn->close();
+?>

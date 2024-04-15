@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pedido</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Registro de Pedido</h2>
+        <form>
+            <div class="form-group">
+                <label for="idCliente">ID de Cliente</label>
+                <select class="form-control" id="idCliente" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el cliente -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idEstablecimiento">ID de Establecimiento</label>
+                <select class="form-control" id="idEstablecimiento" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el establecimiento -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idFactura">ID de Factura</label>
+                <select class="form-control" id="idFactura" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según la factura -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idMetodoPago">ID de Método de Pago</label>
+                <select class="form-control" id="idMetodoPago" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el metodo de pago -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idEstado">ID de Estado</label>
+                <select class="form-control" id="idEstado" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el idEstado-->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notas">Notas</label>
+                <input type="text" class="form-control" id="notas" placeholder="Ingrese las notas">
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="horaRecepcion">Hora de Recepción</label>
+                <input type="time" class="form-control" id="horaRecepcion" required>
+            </div>
+            <a href="facturas.html" class="btn btn-primary">Generar factura</a><br>
+           
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

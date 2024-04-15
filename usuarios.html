@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Registro de Usuarios</h2>
+        <form>
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" id="usuario" placeholder="Ingrese el nombre de usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" class="form-control" id="contrasenia" placeholder="Ingrese la contraseña" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" placeholder="Ingrese el correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="idRol">Rol</label>
+                <select id="idRol" class="form-control" required>
+                    <option value="1">Admin</option>
+                    <option value="2">Usuario Normal</option>
+                    <!-- Agrega las opciones según los roles disponibles -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Usuario</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

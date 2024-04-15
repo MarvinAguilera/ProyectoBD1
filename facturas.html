@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Factura</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Registro de Factura</h2>
+        <form>
+            <div class="form-group">
+                <label for="idDocumento">ID de Documento</label>
+                <select class="form-control" id="idDocumento" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el idDocumento-->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idCliente">ID de Cliente</label>
+                <select class="form-control" id="idCliente" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el cliente -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idMetodoPago">ID Metodo de pago</label>
+                <select class="form-control" id="idMetodoPago" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el idMetodoPago -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idInscripcion">ID InscripcionSAR</label>
+                <select class="form-control" id="idInscripcion" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Agrega las opciones según el idInscripcion -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numeroCorrelativo">Número correlativo</label>
+                <input type="text" class="form-control" id="numeroCorrelativo" placeholder="Ingrese el número de factura" required>
+            </div>
+            <div class="form-group">
+                <label for="numeroFactura">Número de Factura</label>
+                <input type="text" class="form-control" id="numeroFactura" placeholder="Ingrese el número de factura" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="cai">CAI</label>
+                <input type="text" class="form-control" id="cai" placeholder="Ingrese el CAI" required>
+            </div>
+            <div class="form-group">
+                <label for="rtn">RTN</label>
+                <input type="text" class="form-control" id="rtn" placeholder="Ingrese el RTN" required>
+            </div>
+            <div class="form-group">
+                <label for="subTotalExento">Subtotal Exento</label>
+                <input type="number" class="form-control" id="subTotalExento" placeholder="Ingrese el subtotal exento" required>
+            </div>
+            <div class="form-group">
+                <label for="subTotalISV15">Subtotal ISV 15%</label>
+                <input type="number" class="form-control" id="subTotalISV15" placeholder="Ingrese el subtotal ISV 15%" required>
+            </div>
+            <div class="form-group">
+                <label for="subTotalISV18">Subtotal ISV 18%</label>
+                <input type="number" class="form-control" id="subTotalISV18" placeholder="Ingrese el subtotal ISV 18%" required>
+            </div>
+            <div class="form-group">
+                <label for="isv15">ISV 15%</label>
+                <input type="number" class="form-control" id="isv15" placeholder="Ingrese el ISV 15%" required>
+            </div>
+            <div class="form-group">
+                <label for="isv18">ISV 18%</label>
+                <input type="number" class="form-control" id="isv18" placeholder="Ingrese el ISV 18%" required>
+            </div>
+            <div class="form-group">
+                <label for="total">Total</label>
+                <input type="number" class="form-control" id="total" placeholder="Ingrese el total" required>
+            </div>
+            <div class="form-group">
+                <label for="efectivo">Efectivo</label>
+                <input type="number" class="form-control" id="efectivo" placeholder="Ingrese el efectivo" required>
+            </div>
+            <div class="form-group">
+                <label for="cambio">Cambio</label>
+                <input type="number" class="form-control" id="cambio" placeholder="Ingrese el cambio" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Generar factura</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
