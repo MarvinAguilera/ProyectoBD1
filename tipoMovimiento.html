@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método de Pago</title>
+    <title> Tipo de Movimiento</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
-        <h2>Método de Pago</h2>
+        <h2>Tipo Movimiento</h2>
         <form>
             <div class="form-group">
-                <label for="nombreMetodoPago">Método de Pago</label>
-                <select class="form-control" id="nombreMetodoPago" required>
-                    <option value="">Seleccione un método de pago</option>
-                    <option value="efectivo">Efectivo</option>
-                    <option value="tarjeta">Tarjeta</option>
-                </select>
+                <label for="idTipoMovimiento">Nombre </label>
+                <input type="text" class="form-control" id="idTipoMovimiento" placeholder="Ingrese el nombre del tipo de Movimiento" required>
             </div>
-            <button type="submit" class="btn btn-primary">Guardar Método de Pago</button>
+            <div class="form-group">
+                <label for="factor">Factor</label>
+                <input type="text" class="form-control" id="factor" placeholder="Ingrese el factor" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar </button>
         </form>
     </div>
 
@@ -29,4 +29,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-

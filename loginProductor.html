@@ -15,7 +15,21 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="bg-success d-flex justify-content-center align-items-center vh-100">
+
+  <style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(https://imgs.search.brave.com/nelXOR1zWBcNLtcoNjTF43It2wREVyhEkscKr2giCWw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wNC53/YWxscGFwZXJiZXR0/ZXIuY29tL3dhbGxw/YXBlci82MjUvNDE3/LzI1Ni9mcnVpdHMt/ZnJ1aXRzLWFuZC12/ZWdldGFibGVzLWZy/dWl0LXZlZ2V0YWJs/ZS13YWxscGFwZXIt/cHJldmlldy5qcGc);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+</style>
+
+  <body class="d-flex justify-content-center align-items-center vh-100">
     <div
       class="bg-black p-5 rounded-5 text-secondary shadow"
       style="width: 25rem"
@@ -27,7 +41,7 @@
           style="height: 7rem"
         />
       </div>
-      <div class="text-center fs-1 fw-bold">Login</div>
+      <div class="text-center fs-1 fw-bold">Productor</div>
       <div class="input-group mt-4">
         <div class="input-group-text bg-success">
           <img
@@ -68,14 +82,10 @@
             style="font-size: 0.9rem"
             >Olvido su contraseña?</a
           >
-       
         </div>
       </div>
-      <div class="d-flex gap-1 justify-content-center mt-1">
-   
-        <a href="productos.html" class="btn btn-success text-black w-100 mt-4 fw-semibold shadow-sm"
-          >Ingresar</a
-        >
+      <div class="btn btn-success text-black w-100 mt-4 fw-semibold shadow-sm">
+        Login
       </div>
       <div class="d-flex gap-1 justify-content-center mt-1">
         <div>No tienes una cuenta?</div>
@@ -92,4 +102,3 @@
     </div>
   </body>
 </html>
-
