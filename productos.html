@@ -12,10 +12,36 @@
       height: 150px;
       object-fit: cover;
     }
+    body {
+      background-image: url('Images/estante.avif'); /* Reemplaza 'https://example.com/imagen-de-fondo.jpg' con la URL de tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      color: #ffffff; /* Cambia el color del texto si es necesario */
+    }
+
+    .container {
+      background-color: rgba(141, 139, 139, 0.6); /* Fondo semi-transparente para hacer el texto más legible */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .thumbnail {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+
+
   </style>
 </head>
 <body>
 
+  
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Productor de Granos Básicos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +65,7 @@
       </ul>
     </div>
   </nav>
+
 
   <div class="container mt-5">
     <h2 class="text-center mb-4">Productos</h2>
@@ -84,11 +111,16 @@
               <option value="2">Lacteos</option>
               <option value="3">Verduras</option>
             </select>
+            <br>
+            <div id="gallery" class="row"></div>
+            <div class="form-group mt-3">
+              <label for="imagen">Subir imagen:</label>
+              <input type="file" class="form-control-file" id="imagen" name="imagen">
+            </div>
+
           </div>
           <div id="gallery" class="row"></div>
           <button type="submit" class="btn btn-primary mt-3">Guardar</button>
-          <br>
-          <br>
         </form>
       </div>
     </div>
