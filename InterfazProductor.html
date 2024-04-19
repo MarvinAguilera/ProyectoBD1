@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      color: #000000; /* Cambiar el color del texto a negro */
+    }
+
+    /* Estilo para el producto */
+    .product {
+      text-align: center;
+      margin-bottom: 30px;
+      background-color: #ffffff; /* Fondo blanco */
+      padding: 10px; /* Agregar espacio alrededor del texto */
+      border: 1px solid #000000; /* Contorno de 1px sólido negro */
+      border-radius: 10px; /* Borde redondeado */
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombreado 3D */
+    }
+
+    .product img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Productor de Granos Básicos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="InterfazProductor.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="productos.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inventarios.html">Inventario</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+
+
+  <div id="productos-container" class="container"></div>
+
+  <div style="text-align: center;">
+      <h1>Mis Productos </h1>
+  </div>
+
+
+  <section class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="product">
+                <img src="Images/frijoles.jpg" alt="Producto 1">
+                <h2>Frijoles</h2>
+                <p>Precio: L80.00</p>
+                <p>Medida</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="product">
+                <img src="Images/frijoles.jpg" alt="Producto 1">
+                <h2>Frijoles</h2>
+                <p>Precio: L80.00</p>
+                <p>Medida</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="product">
+                <img src="Images/frijoles.jpg" alt="Producto 1">
+                <h2>Frijoles</h2>
+                <p>Precio: L80.00</p>
+                <p>Medida</p>
+            </div>
+        </div>
+        <!-- Agrega más productos según sea necesario -->
+    </div>
+  </section>
+
+</body>
+</html>
+
