@@ -7,114 +7,202 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #factura, #factura * {
+                visibility: visible;
+            }
+            #factura {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
         body {
-            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        .container {
-            background-color: #ffffff;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
+        .factura {
+            background-color: #fff;
+            border: 1px solid #ccc;
             padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
         }
-        h2 {
+        .factura-header {
             text-align: center;
-            margin-bottom: 30px;
-        }
-        label {
-            font-weight: bold;
-        }
-        .form-group {
             margin-bottom: 20px;
         }
-        button[type="submit"] {
+        .factura-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .factura-header p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .table-factura {
             width: 100%;
+            border-collapse: collapse;
+        }
+        .table-factura th,
+        .table-factura td {
+            border: 1px solid #ddd;
+            padding: 4px;
+            text-align: right;
+        }
+        .table-factura th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        /* Nuevos estilos para los campos cantidad, valor y total */
+        .cantidad-columna,
+        .descripcion-columna,
+        .valor-columna,
+        .total-columna {
+            width: 33.33%;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2>Factura</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <form>
-                    <div class="form-group">
-                        <label for="idDocumento">Documento:</label>
-                        <select class="form-control" id="idDocumento" required>
-                            <option value="1">DUI</option>
-                            <option value="2">NIT</option>
-                            <option value="3">Pasaporte</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="idCliente">Cliente:</label>
-                        <select class="form-control" id="idCliente" required>
-                            <option value="1">Cliente A</option>
-                            <option value="2">Cliente B</option>
-                            <option value="3">Cliente C</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="fecha">Fecha:</label>
-                        <input type="date" class="form-control" id="fecha" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="numeroFactura">Número de Factura:</label>
-                        <input type="text" class="form-control" id="numeroFactura" placeholder="Ingrese el número de factura" required>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="cai">CAI:</label>
-                        <input type="text" class="form-control" id="cai" placeholder="Ingrese el CAI" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="rtn">RTN:</label>
-                        <input type="text" class="form-control" id="rtn" placeholder="Ingrese el RTN" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subTotalExento">Subtotal Exento:</label>
-                        <input type="number" class="form-control" id="subTotalExento" placeholder="Ingrese el subtotal exento" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subTotalISV15">Subtotal ISV 15%:</label>
-                        <input type="number" class="form-control" id="subTotalISV15" placeholder="Ingrese el subtotal ISV 15%" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subTotalISV18">Subtotal ISV 18%:</label>
-                        <input type="number" class="form-control" id="subTotalISV18" placeholder="Ingrese el subtotal ISV 18%" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="isv15">ISV 15%:</label>
-                        <input type="number" class="form-control" id="isv15" placeholder="Ingrese el ISV 15%" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="isv18">ISV 18%:</label>
-                        <input type="number" class="form-control" id="isv18" placeholder="Ingrese el ISV 18%" required>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="total">Total:</label>
-                        <input type="number" class="form-control" id="total" placeholder="Ingrese el total" required>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="efectivo">Efectivo:</label>
-                        <input type="number" class="form-control" id="efectivo" placeholder="Ingrese el efectivo" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cambio">Cambio:</label>
-                        <input type="number" class="form-control" id="cambio" placeholder="Ingrese el cambio" required>
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Generar factura</button>
-        </form>
-    </div>
+
+    <!-- Factura -->
+    <div id="factura" class="factura">
+        <div class="factura-header">
+            <h1>Factura</h1>
+            <tr>
+                <th>Numero Factura</th>
+                <td>Nº 002-001-01-00000001</td>
+            </tr>
+            <br>
+        </div>
+
+        <tr class="left-align">
+            <th>Fecha: </th>
+            <p id="fecha"></p>
+        </tr>
+
+        <div class="cliente">
+            <p>Cliente: Nombre del cliente</p>
+        </div>
+
+        <tr>
+            <th>RTN: </th>
+            <td>0817199000030</td>
+        </tr><br>
+
+        
+        <table class="table-factura">
+            <tbody>
+                <tr>
+                    <th class="cantidad-columna">Cantidad</th>
+                    <th class="descripcion-columna">Descripcion</th>
+                    <th class="valor-columna">Valor</th>
+                    <th class="total-columna">Total</th>
+                </tr>
+                <tr>
+                    <td class="cantidad-columna">1</td>
+                    <td class="descripcion-columna">Caja</td>
+                    <td class="valor-columna">$50.00</td>
+                    <td class="total-columna">$50.00</td>
+                </tr>
+                <tr>
+                    <td class="cantidad-columna">1</td>
+                    <td class="descripcion-columna">Hola</td>
+                    <td class="valor-columna">$550.00</td>
+                    <td class="total-columna">$550.00</td>
+                </tr>
+                <!-- Agrega más filas aquí si es necesario -->
+            </tbody>
+        </table>
+
+        <br>
+
+        <!-- Sección para los campos restantes -->
+        <table class="table-factura">
+            <tbody>
+                <tr>
+                    <th>SubTotal Excento</th>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <th>SubTotal ISV 15%</th>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <th>SubTotal ISV 18%</th>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th>ISV 15%</th>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th>ISV 18%</th>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th>Efectivo</th>
+                    <td>1</td>
+                </tr>
+                
+                <tr>
+                    <th>Cambio</th>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Total: $158.50</p>
+
+        <tr>
+            <th>CAI</th>
+            <td>6542H9-B3C8BC-7442C5-5BD634-56B4F5-C0</td>
+        </tr>
+        <br>
+        <tr>
+            <th>Fecha Emision: </th>
+            <td id="fecha"></td>
+        </tr>
+
+        <br>
+
+        <button onclick="window.print()">Imprimir Factura</button>
+
+        <script>
+            // Función para obtener la fecha actual en formato "dd/mm/yyyy"
+            function obtenerFechaActual() {
+                var fecha = new Date();
+                var dia = fecha.getDate();
+                var mes = fecha.getMonth() + 1; // Los meses van de 0 a 11
+                var año = fecha.getFullYear();
+    
+                // Formatear el día y el mes con dos dígitos si son menores que 10
+                if (dia < 10) {
+                    dia = '0' + dia;
+                }
+                if (mes < 10) {
+                    mes = '0' + mes;
+                }
+    
+                // Devolver la fecha en formato "dd/mm/yyyy"
+                return dia + '/' + mes + '/' + año;
+            }
+    
+            // Obtener la fecha actual y mostrarla en el elemento con id "fecha"
+            document.getElementById('fecha').innerText = obtenerFechaActual();
+        </script>
+    </div>    
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -122,4 +210,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
