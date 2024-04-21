@@ -26,6 +26,7 @@
             box-shadow: 0 2px 5px rgba(13, 200, 16, 0.575);
             padding: 20px;
             margin-bottom: 20px;
+            cursor: pointer; /* Cambio del cursor a mano al pasar sobre el producto */
         }
         .product img {
             max-width: 100%;
@@ -51,7 +52,6 @@
         .nav-item:hover .product-list {
          display: block;
 }
-
     </style>
 </head>
 <body>
@@ -60,92 +60,85 @@
             <img src="Images/eco justa.png" alt="login-icon" style="height: 4rem; margin-right: 10px;"> <!-- Imagen -->
             <h1 style="display: inline-block;">Eco Justa</h1> <!-- Texto -->
         </div>
-        
-        
-        
     </header>
-    <nav class="navbar navbar-expand-lg navbar-success bg-success">
-        <div class="container">
-            <a class="nav-link" href="#" style="color: white;">Inicio</a>
+<nav class="navbar navbar-expand-lg navbar-success bg-success">
+    <div class="container">
+        <a class="nav-link" href="interfazCliente.html" style="color: white;">Inicio</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: white;">Productos</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: white;">Tipo de Producto</a>
-                        <ul class="product-list">
-                            <li>Granos basicos</li>
-                            <li>Lacteos</li>
-                            <li>Verduras</li>
-                            <!-- Agrega más elementos de lista según sea necesario -->
-                        </ul>
-                    </li>
-                    
-                    
-                </ul>
-                <form class="form-inline my-2 my-lg-0 mr-3">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
-                </form> 
-                <a href="pedidos.html" class="btn btn-outline-light">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 0.5a.5.5 0 0 1 .5-.5h1a2.5 2.5 0 0 1 2.164 1.25l.672 1.341h6.328a.5.5 0 0 1 .416.777l-1.5 3a.5.5 0 0 1-.416.223h-5.25a1.5 1.5 0 1 0 0 3h2.5a.5.5 0 0 1 .416.777l-1.5 3a.5.5 0 0 1-.416.223H2.5a.5.5 0 0 1-.485-.379L1.078 10.5H1.5a3.5 3.5 0 0 1 3.163 2.1l.614 1.228a1 1 0 0 0 .894.572h5.636a1 1 0 0 0 .894-.572l.614-1.228A3.5 3.5 0 0 1 14.5 10h.422l1.113-2.225a.5.5 0 0 1 .485-.379h1a.5.5 0 0 1 0 1h-0.28l-1.053 2.105a2.5 2.5 0 0 1-2.429 1.895H5.29l-0.672-1.341A1.5 1.5 0 0 0 3.5 10H2a1 1 0 1 1 0-2h1.5a.5.5 0 0 1 .416.777l-1.5 3a.5.5 0 0 1-.416.223H1.5a.5.5 0 0 1-.5-.5V0.5zM4.5 13a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
-                    </svg>
-                    Carrito
-                </a>
-            </div>
-            
-        </div>
-        <div>
-            <ul class="navbar-nav ms-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: white;">Nombre de Usuario</a>
-
+                    <a class="nav-link" href="#" style="color: white;">Tipo de Producto</a>
+                    <ul class="product-list">
+                        <li>Granos basicos</li>
+                        <li>Lacteos</li>
+                        <li>Verduras</li>
+                        <li>Todos Los Productos</li>
+                        <!-- Agrega más elementos de lista según sea necesario -->
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="login.html" class="nav-link"  style="color: white;">Cerrar Sesión</a>
-                    
-                </li>
+                
+                
             </ul>
+            <form class="form-inline my-2 my-lg-0 mr-3">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+            </form> 
+            <a href="carrito.html" class="btn btn-outline-light">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0.5a.5.5 0 0 1 .5-.5h1a2.5 2.5 0 0 1 2.164 1.25l.672 1.341h6.328a.5.5 0 0 1 .416.777l-1.5 3a.5.5 0 0 1-.416.223h-5.25a1.5 1.5 0 1 0 0 3h2.5a.5.5 0 0 1 .416.777l-1.5 3a.5.5 0 0 1-.416.223H2.5a.5.5 0 0 1-.485-.379L1.078 10.5H1.5a3.5 3.5 0 0 1 3.163 2.1l.614 1.228a1 1 0 0 0 .894.572h5.636a1 1 0 0 0 .894-.572l.614-1.228A3.5 3.5 0 0 1 14.5 10h.422l1.113-2.225a.5.5 0 0 1 .485-.379h1a.5.5 0 0 1 0 1h-0.28l-1.053 2.105a2.5 2.5 0 0 1-2.429 1.895H5.29l-0.672-1.341A1.5 1.5 0 0 0 3.5 10H2a1 1 0 1 1 0-2h1.5a.5.5 0 0 1 .416.777l-1.5 3a.5.5 0 0 1-.416.223H1.5a.5.5 0 0 1-.5-.5V0.5zM4.5 13a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                </svg>
+                Carrito
+            </a>
         </div>
-    </nav><br>
-      <!-- Agrega este contenedor donde se cargarán las imágenes -->
-      <br>
-      <br>
-      <br>
-     <div id="productos-container" class="container"></div>
-
-    <div style="text-align: center;">
-        <h1>Productos más vendidos</h1>
+        
     </div>
-    
-    
+    <div>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Nombre de Usuario</a>
+
+            </li>
+            <li class="nav-item">
+                <a href="login.html" class="nav-link"  style="color: white;">Cerrar Sesión</a>
+                
+            </li>
+        </ul>
+    </div>
+</nav><br>
+  <!-- Agrega este contenedor donde se cargarán las imágenes -->
+  <br>
+  <br>
+  <br>
+ <div id="productos-container" class="container"></div>
+
+<div style="text-align: center;">
+    <h1> Productos </h1>
+</div>
     <section class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="product">
+                <div class="product" onclick="goToProductDetails('frijoles')">
                     <img src="Images/frijoles.jpg" alt="Producto 1">
                     <h2>Frijoles</h2>
                     <p>Precio Medida</p>
-                    <p>Precio: L80.00</p> 
+                    <p>Precio: L80.00</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="product">
+                <div class="product" onclick="goToProductDetails('queso')">
                     <img src="Images/queso.jpeg" alt="Producto 2">
                     <h2>Queso</h2>
                     <p>Precio Libra</p>
                     <p>Precio: L50.00</p>
                 </div>
             </div>
+            <!-- Agrega más productos aquí -->
             <div class="col-md-4">
-                <div class="product">
+                <div class="product" onclick="goToProductDetails('maiz')">
                     <img src="Images/maiz.avif" alt="Producto 3">
                     <h2>Maíz</h2>
                     <p>Precio Medida</p>
@@ -153,7 +146,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="product">
+                <div class="product" onclick="goToProductDetails('arroz')">
                     <img src="Images/arroz.jpg" alt="Producto 4">
                     <h2>Arroz</h2>
                     <p>Precio Libra</p>
@@ -161,7 +154,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="product">
+                <div class="product" onclick="goToProductDetails('cebolla')">
                     <img src="Images/cebolla.webp" alt="Producto 5">
                     <h2>Cebollas</h2>
                     <p>Precio Libra</p>
@@ -169,15 +162,22 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="product">
+                <div class="product" onclick="goToProductDetails('papas')">
                     <img src="Images/papas.avif" alt="Producto 6">
-                    <h2>Papas</h2>
+                    <h2>Queso</h2>
                     <p>Precio Libra</p>
                     <p>Precio: L10.00</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        function goToProductDetails(productName) {
+            // Redirige a la página de detalles del producto con el nombre del producto como parámetro en la URL
+            window.location.href = 'VerProducto.html?product=' + encodeURIComponent(productName);
+        }
+    </script>
 </body>
 </html>
 <script>

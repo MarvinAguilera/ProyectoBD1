@@ -6,101 +6,114 @@
     <title>Factura</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        button[type="submit"] {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="text-center">Factura</h2>
-        <div class="d-flex justify-content-center">
+        <h2>Factura</h2>
+        <div class="row">
             <div class="col-md-6">
                 <form>
                     <div class="form-group">
-                        <label for="idDocumento"> Documento</label>
+                        <label for="idDocumento">Documento:</label>
                         <select class="form-control" id="idDocumento" required>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <!-- Agrega las opciones según el idDocumento-->
+                            <option value="1">DUI</option>
+                            <option value="2">NIT</option>
+                            <option value="3">Pasaporte</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="idCliente"> Cliente</label>
+                        <label for="idCliente">Cliente:</label>
                         <select class="form-control" id="idCliente" required>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <!-- Agrega las opciones según el cliente -->
+                            <option value="1">Cliente A</option>
+                            <option value="2">Cliente B</option>
+                            <option value="3">Cliente C</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="idMetodoPago">Metodo de pago</label>
-                        <select class="form-control" id="idMetodoPago" required>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <!-- Agrega las opciones según el idMetodoPago -->
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="idInscripcion">InscripcionSAR</label>
-                        <select class="form-control" id="idInscripcion" required>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <!-- Agrega las opciones según el idInscripcion -->
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="numeroCorrelativo">Número correlativo</label>
-                        <input type="text" class="form-control" id="numeroCorrelativo" placeholder="Ingrese el número de factura" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="numeroFactura">Número de Factura</label>
-                        <input type="text" class="form-control" id="numeroFactura" placeholder="Ingrese el número de factura" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fecha">Fecha</label>
+                        <label for="fecha">Fecha:</label>
                         <input type="date" class="form-control" id="fecha" required>
                     </div>
                     <div class="form-group">
-                        <label for="cai">CAI</label>
+                        <label for="numeroFactura">Número de Factura:</label>
+                        <input type="text" class="form-control" id="numeroFactura" placeholder="Ingrese el número de factura" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cai">CAI:</label>
                         <input type="text" class="form-control" id="cai" placeholder="Ingrese el CAI" required>
                     </div>
                     <div class="form-group">
-                        <label for="rtn">RTN</label>
+                        <label for="rtn">RTN:</label>
                         <input type="text" class="form-control" id="rtn" placeholder="Ingrese el RTN" required>
                     </div>
                     <div class="form-group">
-                        <label for="subTotalExento">Subtotal Exento</label>
+                        <label for="subTotalExento">Subtotal Exento:</label>
                         <input type="number" class="form-control" id="subTotalExento" placeholder="Ingrese el subtotal exento" required>
                     </div>
                     <div class="form-group">
-                        <label for="subTotalISV15">Subtotal ISV 15%</label>
+                        <label for="subTotalISV15">Subtotal ISV 15%:</label>
                         <input type="number" class="form-control" id="subTotalISV15" placeholder="Ingrese el subtotal ISV 15%" required>
                     </div>
                     <div class="form-group">
-                        <label for="subTotalISV18">Subtotal ISV 18%</label>
+                        <label for="subTotalISV18">Subtotal ISV 18%:</label>
                         <input type="number" class="form-control" id="subTotalISV18" placeholder="Ingrese el subtotal ISV 18%" required>
                     </div>
                     <div class="form-group">
-                        <label for="isv15">ISV 15%</label>
+                        <label for="isv15">ISV 15%:</label>
                         <input type="number" class="form-control" id="isv15" placeholder="Ingrese el ISV 15%" required>
                     </div>
                     <div class="form-group">
-                        <label for="isv18">ISV 18%</label>
+                        <label for="isv18">ISV 18%:</label>
                         <input type="number" class="form-control" id="isv18" placeholder="Ingrese el ISV 18%" required>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
                     <div class="form-group">
-                        <label for="total">Total</label>
+                        <label for="total">Total:</label>
                         <input type="number" class="form-control" id="total" placeholder="Ingrese el total" required>
                     </div>
+                </div>
+                <div class="col-md-6">
                     <div class="form-group">
-                        <label for="efectivo">Efectivo</label>
+                        <label for="efectivo">Efectivo:</label>
                         <input type="number" class="form-control" id="efectivo" placeholder="Ingrese el efectivo" required>
                     </div>
                     <div class="form-group">
-                        <label for="cambio">Cambio</label>
+                        <label for="cambio">Cambio:</label>
                         <input type="number" class="form-control" id="cambio" placeholder="Ingrese el cambio" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Generar factura</button>
-                </form>
+                </div>
             </div>
-        </div>
+            <button type="submit" class="btn btn-primary">Generar factura</button>
+        </form>
     </div>
 
     <!-- Bootstrap JS -->
@@ -109,3 +122,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

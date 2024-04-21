@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <!-- Agregamos Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .prueba5 {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(13, 200, 16, 0.575);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .prueba5 img {
+            max-width: 100%;
+            height: auto;
+            /* Establecer un tamaño mediano para la imagen */
+            width: 300px;
+            height: 300px;
+            /* Centrar la imagen horizontalmente */
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .prueba5 h2 {
+            margin-top: 0;
+        }
+        .prueba5 p {
+            margin-bottom: 10px;
+        }
+        .btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="prueba5">
+            <img src="" alt="Producto">
+            <h2 id="productName"></h2>
+            <p id="productPrice"></p>
+            <div>
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" value="1" min="1">
+            </div>
+            <button class="btn btn-primary" onclick="addToCart()">Agregar al carrito</button><br> 
+            <br>
+            <a
+             class="btn btn-primary" href="interfazCliente.html" > Regresar </a> </div>
+        </div>
+      
+    </div>
+
+    <script>
+        // Obtén el nombre del producto de la URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var productName = urlParams.get('product');
+        // Simula obtener los detalles del producto usando el nombre
+        // Aquí deberías obtener los detalles del producto de alguna fuente de datos, como una base de datos o un servicio web
+        var productDetails = getProductDetails(productName);
+
+        // Actualiza los detalles del producto en la página
+        document.querySelector('.prueba5 img').src = productDetails.image;
+        document.getElementById('productName').textContent = productDetails.name;
+        document.getElementById('productPrice').textContent = 'Precio: ' + productDetails.price;
+
+        function addToCart() {
+            var quantity = document.getElementById('quantity').value;
+            // Aquí puedes agregar la lógica para agregar el producto al carrito
+            // Por ejemplo, podrías almacenar el nombre del producto y la cantidad en localStorage o sessionStorage
+            console.log('Producto agregado al carrito:', productName, 'Cantidad:', quantity);
+        }
+
+        // Función de simulación para obtener detalles del producto
+        function getProductDetails(productName) {
+            if (productName === 'frijoles') {
+                return {
+                    name: 'Frijoles',
+                    image: 'Images/frijoles.jpg',
+                    price: 'L80.00'
+                };
+            } else if (productName === 'queso') {
+                return {
+                    name: 'Queso',
+                    image: 'Images/queso.jpeg',
+                    price: 'L50.00'
+                };
+            }else if (productName === 'maiz') {
+                return {
+                    name: 'Maíz',
+                    image: 'Images/maiz.avif',
+                    price: 'L20.00'
+                };
+            }else if (productName === 'arroz') {
+                return {
+                    name: 'Arroz',
+                    image: 'Images/arroz.jpg',
+                    price: 'L8.00'
+                };
+            }else if (productName === 'cebolla') {
+                return {
+                    name: 'Cebollas',
+                    image: 'Images/cebolla.webp',
+                    price: 'L20.00'
+                };
+            }else if (productName === 'papas') {
+                return {
+                    name: 'Papas',
+                    image: 'Images/papas.avif',
+                    price: 'L10.00'
+                };
+            }
+            
+            // Agrega más productos según sea necesario
+        }
+    </script>
+</body>
+</html>
